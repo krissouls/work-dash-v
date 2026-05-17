@@ -9,13 +9,16 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/50">
-      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+    <footer className="relative border-t border-[#3533cd]/20 overflow-hidden">
+      {/* Subtle gradient */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#3533cd]/5 to-transparent pointer-events-none" />
+      
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="grid gap-8 py-10 sm:py-12 grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 lg:py-16">
           <div className="col-span-2 sm:col-span-2 lg:col-span-1 mb-4 lg:mb-0">
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                <span className="text-sm font-bold text-primary-foreground">W</span>
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#3533cd]">
+                <span className="text-sm font-bold text-white">W</span>
               </div>
               <span className="text-lg font-semibold text-foreground">WorkDash</span>
             </Link>
@@ -32,7 +35,7 @@ export function Footer() {
                   <li key={link}>
                     <Link
                       href="#"
-                      className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                      className="text-sm text-muted-foreground transition-colors hover:text-[#3533cd]"
                     >
                       {link}
                     </Link>
@@ -43,15 +46,15 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-border/50 py-6 sm:py-8 sm:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-[#3533cd]/10 py-6 sm:py-8 sm:flex-row">
           <p className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left">
             &copy; {new Date().getFullYear()} WorkDash. All rights reserved.
           </p>
           <div className="flex gap-4 sm:gap-6">
-            <Link href="#" className="text-xs sm:text-sm text-muted-foreground transition-colors hover:text-foreground">
+            <Link href="#" className="text-xs sm:text-sm text-muted-foreground transition-colors hover:text-[#3533cd]">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-xs sm:text-sm text-muted-foreground transition-colors hover:text-foreground">
+            <Link href="#" className="text-xs sm:text-sm text-muted-foreground transition-colors hover:text-[#3533cd]">
               Terms of Service
             </Link>
           </div>

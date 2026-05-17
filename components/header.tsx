@@ -16,11 +16,11 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-md">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-[#3533cd]/20 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-14 sm:h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-lg bg-primary">
-            <span className="text-xs sm:text-sm font-bold text-primary-foreground">W</span>
+          <div className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-lg bg-[#3533cd]">
+            <span className="text-xs sm:text-sm font-bold text-white">W</span>
           </div>
           <span className="text-base sm:text-lg font-semibold text-foreground">WorkDash</span>
         </Link>
@@ -30,7 +30,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="text-sm text-muted-foreground transition-colors hover:text-[#3533cd]"
             >
               {link.label}
             </Link>
@@ -38,7 +38,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button className="hidden md:inline-flex">Get Started</Button>
+          <Button className="hidden md:inline-flex bg-[#3533cd] hover:bg-[#3533cd]/90">Get Started</Button>
           <button
             className="md:hidden text-foreground p-2 -mr-2 touch-manipulation"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -50,19 +50,19 @@ export function Header() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="border-t border-border/50 bg-background md:hidden">
+        <div className="border-t border-[#3533cd]/20 bg-background/95 backdrop-blur-md md:hidden">
           <nav className="flex flex-col px-4 py-3">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="py-3.5 text-base text-muted-foreground transition-colors hover:text-foreground active:text-foreground border-b border-border/30 last:border-b-0"
+                className="py-3.5 text-base text-muted-foreground transition-colors hover:text-[#3533cd] active:text-[#3533cd] border-b border-[#3533cd]/10 last:border-b-0"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <Button className="mt-4 w-full h-12 text-base">Get Started</Button>
+            <Button className="mt-4 w-full h-12 text-base bg-[#3533cd] hover:bg-[#3533cd]/90">Get Started</Button>
           </nav>
         </div>
       )}
