@@ -3,61 +3,61 @@ import { MessageCircle, Mail, ArrowRight } from "lucide-react"
 
 export function Contact() {
   return (
-    <section id="contact" className="relative py-24 lg:py-32 bg-secondary/30">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+    <section id="contact" className="relative py-16 sm:py-24 lg:py-32 bg-secondary/30">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
-            <p className="text-sm font-medium uppercase tracking-wider text-primary">
+            <p className="text-xs sm:text-sm font-medium uppercase tracking-wider text-primary">
               Get in Touch
             </p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-balance">
+            <h2 className="mt-2 text-2xl sm:text-3xl lg:text-5xl font-bold tracking-tight text-balance">
               Ready to get started?
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground">
               Whether you&apos;re looking for workers or searching for gigs, 
               we&apos;re here to help. Reach out and let&apos;s build something great together.
             </p>
 
-            <div className="mt-10 space-y-6">
+            <div className="mt-8 sm:mt-10 space-y-4 sm:space-y-6">
               <a
                 href="https://wa.me/1234567890"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-2xl border border-border/50 bg-card p-6 transition-all hover:border-primary/50 hover:bg-secondary/50"
+                className="flex items-center gap-3 sm:gap-4 rounded-2xl border border-border/50 bg-card p-4 sm:p-6 transition-all hover:border-primary/50 hover:bg-secondary/50 active:scale-[0.98]"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-500/10 text-green-500">
-                  <MessageCircle className="h-6 w-6" />
+                <div className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-green-500/10 text-green-500 shrink-0">
+                  <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-semibold">WhatsApp</h3>
-                  <p className="text-sm text-muted-foreground">Message us for quick support</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-semibold text-sm sm:text-base">WhatsApp</h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Message us for quick support</p>
                 </div>
-                <ArrowRight className="h-5 w-5 text-muted-foreground" />
+                <ArrowRight className="h-5 w-5 text-muted-foreground shrink-0" />
               </a>
 
               <a
                 href="mailto:knsolanki011@gmail.com"
-                className="flex items-center gap-4 rounded-2xl border border-border/50 bg-card p-6 transition-all hover:border-primary/50 hover:bg-secondary/50"
+                className="flex items-center gap-3 sm:gap-4 rounded-2xl border border-border/50 bg-card p-4 sm:p-6 transition-all hover:border-primary/50 hover:bg-secondary/50 active:scale-[0.98]"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <Mail className="h-6 w-6" />
+                <div className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-primary/10 text-primary shrink-0">
+                  <Mail className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-semibold">Email</h3>
-                  <p className="text-sm text-muted-foreground">knsolanki011@gmail.com</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-semibold text-sm sm:text-base">Email</h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground truncate">knsolanki011@gmail.com</p>
                 </div>
-                <ArrowRight className="h-5 w-5 text-muted-foreground" />
+                <ArrowRight className="h-5 w-5 text-muted-foreground shrink-0" />
               </a>
             </div>
           </div>
 
           <div className="flex flex-col justify-center">
-            <div className="rounded-3xl border border-border/50 bg-card p-8 lg:p-12">
-              <h3 className="text-2xl font-bold">Start your free trial</h3>
-              <p className="mt-2 text-muted-foreground">
+            <div className="rounded-2xl sm:rounded-3xl border border-border/50 bg-card p-5 sm:p-8 lg:p-12">
+              <h3 className="text-xl sm:text-2xl font-bold">Start your free trial</h3>
+              <p className="mt-2 text-sm sm:text-base text-muted-foreground">
                 No credit card required. Get started in minutes.
               </p>
-              <form className="mt-8 space-y-4">
+              <form className="mt-6 sm:mt-8 space-y-3 sm:space-y-4">
                 <div>
                   <input
                     type="text"
@@ -80,7 +80,7 @@ export function Contact() {
                     <option value="both">Both</option>
                   </select>
                 </div>
-                <Button className="w-full" size="lg">
+                <Button className="w-full h-12 text-base" size="lg">
                   Get Started
                 </Button>
               </form>
